@@ -51,29 +51,15 @@ body {
   cursor: none;
 }
 
-#cursor {
-  position: fixed;
-  width: 32px;
-  height: 32px;
-  border: 2px solid #00ffff;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 10px #00ffff, 0 0 20px rgba(0, 255, 255, 0.6),inset 0 0 24px rgba(0, 255, 255, 0.4);
-  opacity: 1;
-}
-
 #cursor-dot {
   position: fixed;
   width: 6px;
   height: 6px;
-  background: #00ffff;
+  background: var(--accent);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
   transform: translate(-50%, -50%);
-  box-shadow: 0 0 6px #00ffff;
   
 }
 
@@ -200,7 +186,7 @@ nav {
   content: '';
   position: absolute;
   width: 400px;
-  height:400px;
+  height:100svh;
   border-radius: 50%;
   bottom: 50px;
   left: 10%;
@@ -587,4 +573,34 @@ section {
   font-size: 0.82rem;
   color: var(--muted);
   max-width: 600px;
+}
+
+#contact {
+  text-align: center;
+}
+
+#contact .section-inner {
+  max-width: 600px;
+  
+}
+
+.contact-lead {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 2.5rem;
+}
+.email-link {
+  font-family: var(--font-body);
+  letter-spacing: 0.2em;
+  margin-bottom: 3rem;
+  transition: color var(--transition);
+  color: var(--text);
+  display: inline-block;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  color: var(--accent);
 }
